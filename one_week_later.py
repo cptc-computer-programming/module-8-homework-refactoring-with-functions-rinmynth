@@ -51,10 +51,10 @@ def main():
     month = user_month
     day = user_day
 
-    month, day = find_date_one_week_later(month, day)
+    new_month, new_day = find_date_one_week_later(month, day)
 
     print("A week after " + str(user_month) + "/" + str(user_day) +
-      " is " + str(month) + "/" + str(day))
+      " is " + str(new_month) + "/" + str(new_day))
     
 if __name__ == "__main__":
     main()
