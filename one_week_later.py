@@ -9,18 +9,9 @@ FEB_DAYS = 28
 LONG_MONTH_DAYS = 31  # Jan, Mar, May, Jul, Aug, Oct, Dec
 SHORT_MONTH_DAYS = 30 # Apr, Jun, Sep, Nov
 
-# -----------------------------
-# User Input
-# -----------------------------
 
+def find_date_one_week_later(month, day):
 
-def find_date_one_week_later(month, date):
-    # Copy input values so we can keep originals for final output 
-
-
-    # -----------------------------
-    # Add 7 days
-    # -----------------------------
     day += DAYS_IN_WEEK
 
     # -----------------------------
@@ -48,6 +39,8 @@ def find_date_one_week_later(month, date):
     if month > 12:
         month %= 12
 
+    return month, day
+
 # -----------------------------
 # Output
 # -----------------------------
@@ -58,9 +51,10 @@ def main():
     month = user_month
     day = user_day
 
+    month, day = find_date_one_week_later(month, day)
 
     print("A week after " + str(user_month) + "/" + str(user_day) +
       " is " + str(month) + "/" + str(day))
     
-if __name__ == "__name__":
+if __name__ == "__main__":
     main()
